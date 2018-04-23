@@ -8,24 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		2C9F0A9E208D653300DD7F3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9F0A9D208D653300DD7F3C /* AppDelegate.m */; };
-		2C9F0AA1208D653300DD7F3C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9F0AA0208D653300DD7F3C /* ViewController.m */; };
 		2C9F0AA4208D653300DD7F3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C9F0AA2208D653300DD7F3C /* Main.storyboard */; };
 		2C9F0AA6208D653300DD7F3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C9F0AA5208D653300DD7F3C /* Assets.xcassets */; };
 		2C9F0AA9208D653300DD7F3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C9F0AA7208D653300DD7F3C /* LaunchScreen.storyboard */; };
 		2C9F0AAC208D653300DD7F3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9F0AAB208D653300DD7F3C /* main.m */; };
+		2C9F0AB4208D659000DD7F3C /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9F0AB3208D659000DD7F3C /* SplashViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2C9F0A99208D653300DD7F3C /* QuSnap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuSnap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C9F0A9C208D653300DD7F3C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2C9F0A9D208D653300DD7F3C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2C9F0A9F208D653300DD7F3C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2C9F0AA0208D653300DD7F3C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		2C9F0AA3208D653300DD7F3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2C9F0AA5208D653300DD7F3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C9F0AA8208D653300DD7F3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C9F0AAA208D653300DD7F3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C9F0AAB208D653300DD7F3C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2C9F0AB2208D659000DD7F3C /* SplashViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
+		2C9F0AB3208D659000DD7F3C /* SplashViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +60,9 @@
 			children = (
 				2C9F0A9C208D653300DD7F3C /* AppDelegate.h */,
 				2C9F0A9D208D653300DD7F3C /* AppDelegate.m */,
-				2C9F0A9F208D653300DD7F3C /* ViewController.h */,
-				2C9F0AA0208D653300DD7F3C /* ViewController.m */,
 				2C9F0AA2208D653300DD7F3C /* Main.storyboard */,
+				2C9F0AB2208D659000DD7F3C /* SplashViewController.h */,
+				2C9F0AB3208D659000DD7F3C /* SplashViewController.m */,
 				2C9F0AA5208D653300DD7F3C /* Assets.xcassets */,
 				2C9F0AA7208D653300DD7F3C /* LaunchScreen.storyboard */,
 				2C9F0AAA208D653300DD7F3C /* Info.plist */,
@@ -142,9 +142,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C9F0AA1208D653300DD7F3C /* ViewController.m in Sources */,
 				2C9F0AAC208D653300DD7F3C /* main.m in Sources */,
 				2C9F0A9E208D653300DD7F3C /* AppDelegate.m in Sources */,
+				2C9F0AB4208D659000DD7F3C /* SplashViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
