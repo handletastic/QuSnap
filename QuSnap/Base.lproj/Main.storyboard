@@ -24,31 +24,43 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Dkl-Pe-phY"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" red="1" green="0.79695572439999995" blue="0.50190500490000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWh-Tq-hfV" userLabel="singupButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWh-Tq-hfV" userLabel="signupButton">
                                 <rect key="frame" x="102" y="538" width="171" height="40"/>
                                 <color key="backgroundColor" red="0.97636479139999999" green="0.97653168440000004" blue="0.9763541818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="FG6-c8-th5"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" red="1" green="0.79695572439999995" blue="0.50190500490000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QuSnap" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I8n-5X-9fd">
+                                <rect key="frame" x="102" y="90" width="171" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="keU-M5-YZw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
+                                <color key="textColor" red="0.6027872057" green="0.61624662600000002" blue="0.98548370600000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.79695572439999995" blue="0.50190500490000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IWh-Tq-hfV" secondAttribute="bottom" constant="89" id="1cX-vT-cQZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="I8n-5X-9fd" secondAttribute="trailing" constant="102" id="Bp9-sy-a2y"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PVd-uT-QvP" secondAttribute="trailing" constant="102" id="Bqt-oJ-XbC"/>
                             <constraint firstItem="PVd-uT-QvP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="102" id="GFT-wO-DKX"/>
                             <constraint firstItem="IWh-Tq-hfV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="102" id="TyC-u5-myb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IWh-Tq-hfV" secondAttribute="trailing" constant="102" id="eBD-t3-ZtC"/>
                             <constraint firstItem="IWh-Tq-hfV" firstAttribute="top" secondItem="PVd-uT-QvP" secondAttribute="bottom" constant="38" id="hj2-EI-yaG"/>
+                            <constraint firstItem="I8n-5X-9fd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="102" id="muF-Bm-6oS"/>
+                            <constraint firstItem="I8n-5X-9fd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="u2e-kD-eIB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
