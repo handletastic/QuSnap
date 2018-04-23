@@ -13,6 +13,7 @@
 		2C9F0AA9208D653300DD7F3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C9F0AA7208D653300DD7F3C /* LaunchScreen.storyboard */; };
 		2C9F0AAC208D653300DD7F3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9F0AAB208D653300DD7F3C /* main.m */; };
 		2C9F0AB4208D659000DD7F3C /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9F0AB3208D659000DD7F3C /* SplashViewController.m */; };
+		2CE00BF9208EA57600EC84E1 /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE00BF8208EA57600EC84E1 /* SignupViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		2C9F0AAB208D653300DD7F3C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2C9F0AB2208D659000DD7F3C /* SplashViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
 		2C9F0AB3208D659000DD7F3C /* SplashViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
+		2CE00BF7208EA57600EC84E1 /* SignupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignupViewController.h; sourceTree = "<group>"; };
+		2CE00BF8208EA57600EC84E1 /* SignupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignupViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				2C9F0AA7208D653300DD7F3C /* LaunchScreen.storyboard */,
 				2C9F0AAA208D653300DD7F3C /* Info.plist */,
 				2C9F0AAB208D653300DD7F3C /* main.m */,
+				2CE00BF7208EA57600EC84E1 /* SignupViewController.h */,
+				2CE00BF8208EA57600EC84E1 /* SignupViewController.m */,
 			);
 			path = QuSnap;
 			sourceTree = "<group>";
@@ -144,6 +149,7 @@
 			files = (
 				2C9F0AAC208D653300DD7F3C /* main.m in Sources */,
 				2C9F0A9E208D653300DD7F3C /* AppDelegate.m in Sources */,
+				2CE00BF9208EA57600EC84E1 /* SignupViewController.m in Sources */,
 				2C9F0AB4208D659000DD7F3C /* SplashViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
