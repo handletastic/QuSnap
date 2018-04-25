@@ -19,6 +19,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 }
+
+//navigation bar show/hide
+- (void)viewWillAppear:(BOOL)animated {
+    self.navigationController.navigationBar.hidden = YES;
+}
+- (void)viewWillDisappear:(BOOL)animated {
+    self.navigationController.navigationBar.hidden = NO;
+}
+
+//splash screen buttons
 - (IBAction)signupAction:(id)sender {
     NSLog(@"signup action");
 }
