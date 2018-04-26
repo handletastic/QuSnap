@@ -6,6 +6,8 @@ target 'QuSnap' do
   # use_frameworks!
 
   # Pods for QuSnap
-  pod 'Firebase/Core'
   pod 'Firebase', '~> 4.13.0'
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  
 end

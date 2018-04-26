@@ -7,6 +7,7 @@
 //
 
 #import "SignupViewController.h"
+@import FirebaseAuth;
 
 @interface SignupViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
@@ -33,15 +34,13 @@
 }
 
 - (IBAction)submitAction:(id)sender {
-    NSDictionary *signupParams = [[NSDictionary alloc] init];
     
     //textfield validation
-    if (self.emailTextField.text > 0 &&
-        self.usernameTextField.text > 0 &&
-        self.passwordTextField.text > 0) { //if all fields are filled
-        signupParams = @{@"email" : self.emailTextField.text,
-                         @"username" : self.usernameTextField.text,
-                         @"password" : self.passwordTextField.text};
+    if ([_emailTextField hasText] &&
+        [_usernameTextField hasText] &&
+        [_passwordTextField hasText]) { //if all fields are filled
+
+        [self signupUserWithEmail:self.emailTextField.text password:self.passwordTextField.text];
         
         //email validation
         if (![self validEmailAddress:self.emailTextField.text]) { //if email is invalid
@@ -57,8 +56,6 @@
             [alertController addAction:confirmationAction];
             [self presentViewController:alertController animated:YES completion:nil];
         }
-        
-        NSLog(@"signup params %@", signupParams);
         
         //firebase
     } else { //there are empty fields
@@ -76,8 +73,24 @@
         
         [self presentViewController:alertController animated:YES completion:nil];
     }
-    
-    
+}
+
+- (void)signupUserWithEmail:(NSString *)email password:(NSString *)password {
+    //start a loading indicator
+    [[FIRAuth auth] createUserWithEmail:email
+                               password:password
+                             completion:^(FIRUser *_Nullable user,
+                                          NSError *_Nullable error) {
+                                 if (error != nil) {
+                                     //account created
+                                 } else {
+                                    //show error
+                                 }
+                                 
+                                 //upon completion since it is asynchronous
+                                 NSLog(@"user %@ error %@", user, error);
+                                 //finish a loading indicator
+                             }];
 }
 
 @end
