@@ -13,7 +13,9 @@
 		2C9F0AA9208D653300DD7F3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C9F0AA7208D653300DD7F3C /* LaunchScreen.storyboard */; };
 		2C9F0AAC208D653300DD7F3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9F0AAB208D653300DD7F3C /* main.m */; };
 		2C9F0AB4208D659000DD7F3C /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9F0AB3208D659000DD7F3C /* SplashViewController.m */; };
+		2CB091B22091C09700E2CFE6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CB091B12091C09700E2CFE6 /* GoogleService-Info.plist */; };
 		2CE00BF9208EA57600EC84E1 /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE00BF8208EA57600EC84E1 /* SignupViewController.m */; };
+		C9077E768FF4A8D6E31DDA3B /* libPods-QuSnap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C4EFAA84163603FA9177B2C /* libPods-QuSnap.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,8 +29,12 @@
 		2C9F0AAB208D653300DD7F3C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2C9F0AB2208D659000DD7F3C /* SplashViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
 		2C9F0AB3208D659000DD7F3C /* SplashViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
+		2CB091B12091C09700E2CFE6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2CE00BF7208EA57600EC84E1 /* SignupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignupViewController.h; sourceTree = "<group>"; };
 		2CE00BF8208EA57600EC84E1 /* SignupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignupViewController.m; sourceTree = "<group>"; };
+		5BFE0B54373FEBAAF8529965 /* Pods-QuSnap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuSnap.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuSnap/Pods-QuSnap.release.xcconfig"; sourceTree = "<group>"; };
+		810A48FC4437C7BD27A195CF /* Pods-QuSnap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuSnap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuSnap/Pods-QuSnap.debug.xcconfig"; sourceTree = "<group>"; };
+		8C4EFAA84163603FA9177B2C /* libPods-QuSnap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QuSnap.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,17 +42,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9077E768FF4A8D6E31DDA3B /* libPods-QuSnap.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07BA8CD83FA11DC02EE47335 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C4EFAA84163603FA9177B2C /* libPods-QuSnap.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2C9F0A90208D653300DD7F3C = {
 			isa = PBXGroup;
 			children = (
 				2C9F0A9B208D653300DD7F3C /* QuSnap */,
 				2C9F0A9A208D653300DD7F3C /* Products */,
+				A5CC8922E9AF759143A1C4CE /* Pods */,
+				07BA8CD83FA11DC02EE47335 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,6 +78,7 @@
 		2C9F0A9B208D653300DD7F3C /* QuSnap */ = {
 			isa = PBXGroup;
 			children = (
+				2CB091B12091C09700E2CFE6 /* GoogleService-Info.plist */,
 				2C9F0A9C208D653300DD7F3C /* AppDelegate.h */,
 				2C9F0A9D208D653300DD7F3C /* AppDelegate.m */,
 				2C9F0AA2208D653300DD7F3C /* Main.storyboard */,
@@ -76,6 +94,15 @@
 			path = QuSnap;
 			sourceTree = "<group>";
 		};
+		A5CC8922E9AF759143A1C4CE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				810A48FC4437C7BD27A195CF /* Pods-QuSnap.debug.xcconfig */,
+				5BFE0B54373FEBAAF8529965 /* Pods-QuSnap.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,6 +110,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2C9F0AAF208D653300DD7F3C /* Build configuration list for PBXNativeTarget "QuSnap" */;
 			buildPhases = (
+				B4F17CDE292747FA5F636CEF /* [CP] Check Pods Manifest.lock */,
 				2C9F0A95208D653300DD7F3C /* Sources */,
 				2C9F0A96208D653300DD7F3C /* Frameworks */,
 				2C9F0A97208D653300DD7F3C /* Resources */,
@@ -135,12 +163,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C9F0AA9208D653300DD7F3C /* LaunchScreen.storyboard in Resources */,
+				2CB091B22091C09700E2CFE6 /* GoogleService-Info.plist in Resources */,
 				2C9F0AA6208D653300DD7F3C /* Assets.xcassets in Resources */,
 				2C9F0AA4208D653300DD7F3C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B4F17CDE292747FA5F636CEF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QuSnap-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2C9F0A95208D653300DD7F3C /* Sources */ = {
@@ -282,6 +332,7 @@
 		};
 		2C9F0AB0208D653300DD7F3C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 810A48FC4437C7BD27A195CF /* Pods-QuSnap.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,6 +347,7 @@
 		};
 		2C9F0AB1208D653300DD7F3C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BFE0B54373FEBAAF8529965 /* Pods-QuSnap.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
