@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C8815F120921A1500EFEE48 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8815F020921A1500EFEE48 /* LoginViewController.m */; };
 		2C9F0A9E208D653300DD7F3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9F0A9D208D653300DD7F3C /* AppDelegate.m */; };
 		2C9F0AA4208D653300DD7F3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C9F0AA2208D653300DD7F3C /* Main.storyboard */; };
 		2C9F0AA6208D653300DD7F3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C9F0AA5208D653300DD7F3C /* Assets.xcassets */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C8815EF20921A1500EFEE48 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		2C8815F020921A1500EFEE48 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		2C9F0A99208D653300DD7F3C /* QuSnap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuSnap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C9F0A9C208D653300DD7F3C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2C9F0A9D208D653300DD7F3C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -82,14 +85,16 @@
 				2C9F0A9C208D653300DD7F3C /* AppDelegate.h */,
 				2C9F0A9D208D653300DD7F3C /* AppDelegate.m */,
 				2C9F0AA2208D653300DD7F3C /* Main.storyboard */,
-				2C9F0AB2208D659000DD7F3C /* SplashViewController.h */,
-				2C9F0AB3208D659000DD7F3C /* SplashViewController.m */,
 				2C9F0AA5208D653300DD7F3C /* Assets.xcassets */,
 				2C9F0AA7208D653300DD7F3C /* LaunchScreen.storyboard */,
 				2C9F0AAA208D653300DD7F3C /* Info.plist */,
 				2C9F0AAB208D653300DD7F3C /* main.m */,
+				2C9F0AB2208D659000DD7F3C /* SplashViewController.h */,
+				2C9F0AB3208D659000DD7F3C /* SplashViewController.m */,
 				2CE00BF7208EA57600EC84E1 /* SignupViewController.h */,
 				2CE00BF8208EA57600EC84E1 /* SignupViewController.m */,
+				2C8815EF20921A1500EFEE48 /* LoginViewController.h */,
+				2C8815F020921A1500EFEE48 /* LoginViewController.m */,
 			);
 			path = QuSnap;
 			sourceTree = "<group>";
@@ -201,6 +206,7 @@
 				2C9F0A9E208D653300DD7F3C /* AppDelegate.m in Sources */,
 				2CE00BF9208EA57600EC84E1 /* SignupViewController.m in Sources */,
 				2C9F0AB4208D659000DD7F3C /* SplashViewController.m in Sources */,
+				2C8815F120921A1500EFEE48 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
