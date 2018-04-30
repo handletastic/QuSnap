@@ -69,28 +69,29 @@
                    username:(NSString *)username
                    password:(NSString *)password {
     //start a loading indicator
-    [[FIRAuth auth] createUserWithEmail:email
-                               password:password
-                             completion:^(FIRUser *_Nullable user,
-                                          NSError *_Nullable error) {
-                                 if (error != nil) {
-                                     FIRUserProfileChangeRequest *changeRequest = [[FIRAuth auth].currentUser profileChangeRequest];
-                                     changeRequest.displayName = username;
-                                     [changeRequest commitChangesWithCompletion:^(NSError *_Nullable error) {
-                                         if (error) {
-                                             NSLog(@"error %@", error.localizedDescription);
-                                         } else {
-                                             
-                                         }
-                                     }];
-                                 } else {
-                                    //show error
-                                 }
-                                 
-                                 //upon completion since it is asynchronous
-                                 NSLog(@"user %@ error %@", user, error);
-                                 //finish a loading indicator
-                             }];
+    [[FIRAuth auth]
+     createUserWithEmail:email
+     password:password
+     completion:^(FIRUser *_Nullable user,
+                  NSError *_Nullable error) {
+         if (error != nil) {
+             FIRUserProfileChangeRequest *changeRequest = [[FIRAuth auth].currentUser profileChangeRequest];
+             changeRequest.displayName = username;
+             [changeRequest commitChangesWithCompletion:^(NSError *_Nullable error) {
+                 if (error) {
+                     NSLog(@"error %@", error.localizedDescription);
+                 } else {
+                     
+                 }
+                 
+             }];
+         } else {
+             //show error
+         }
+         //upon completion since it is asynchronous
+         NSLog(@"user %@ error %@", user, error);
+         //finish a loading indicator
+     }];
 }
 
 
