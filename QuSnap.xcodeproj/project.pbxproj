@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C1569352099B2C5006E2140 /* PickRecipientTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1569342099B2C5006E2140 /* PickRecipientTableViewController.m */; };
 		2C8815F120921A1500EFEE48 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8815F020921A1500EFEE48 /* LoginViewController.m */; };
+		2C8815F42097300200EFEE48 /* VerifySessionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8815F32097300200EFEE48 /* VerifySessionViewController.m */; };
+		2C8815F72097E44400EFEE48 /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8815F62097E44400EFEE48 /* HomeTableViewController.m */; };
+		2C8815FA2097E48200EFEE48 /* NewSnapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8815F92097E48200EFEE48 /* NewSnapViewController.m */; };
 		2C9F0A9E208D653300DD7F3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9F0A9D208D653300DD7F3C /* AppDelegate.m */; };
 		2C9F0AA4208D653300DD7F3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C9F0AA2208D653300DD7F3C /* Main.storyboard */; };
 		2C9F0AA6208D653300DD7F3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C9F0AA5208D653300DD7F3C /* Assets.xcassets */; };
@@ -20,8 +24,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C1569332099B2C5006E2140 /* PickRecipientTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PickRecipientTableViewController.h; sourceTree = "<group>"; };
+		2C1569342099B2C5006E2140 /* PickRecipientTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PickRecipientTableViewController.m; sourceTree = "<group>"; };
 		2C8815EF20921A1500EFEE48 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		2C8815F020921A1500EFEE48 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		2C8815F22097300200EFEE48 /* VerifySessionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VerifySessionViewController.h; sourceTree = "<group>"; };
+		2C8815F32097300200EFEE48 /* VerifySessionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VerifySessionViewController.m; sourceTree = "<group>"; };
+		2C8815F52097E44400EFEE48 /* HomeTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeTableViewController.h; sourceTree = "<group>"; };
+		2C8815F62097E44400EFEE48 /* HomeTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewController.m; sourceTree = "<group>"; };
+		2C8815F82097E48200EFEE48 /* NewSnapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewSnapViewController.h; sourceTree = "<group>"; };
+		2C8815F92097E48200EFEE48 /* NewSnapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewSnapViewController.m; sourceTree = "<group>"; };
 		2C9F0A99208D653300DD7F3C /* QuSnap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuSnap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C9F0A9C208D653300DD7F3C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2C9F0A9D208D653300DD7F3C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -95,6 +107,14 @@
 				2CE00BF8208EA57600EC84E1 /* SignupViewController.m */,
 				2C8815EF20921A1500EFEE48 /* LoginViewController.h */,
 				2C8815F020921A1500EFEE48 /* LoginViewController.m */,
+				2C8815F22097300200EFEE48 /* VerifySessionViewController.h */,
+				2C8815F32097300200EFEE48 /* VerifySessionViewController.m */,
+				2C8815F52097E44400EFEE48 /* HomeTableViewController.h */,
+				2C8815F62097E44400EFEE48 /* HomeTableViewController.m */,
+				2C8815F82097E48200EFEE48 /* NewSnapViewController.h */,
+				2C8815F92097E48200EFEE48 /* NewSnapViewController.m */,
+				2C1569332099B2C5006E2140 /* PickRecipientTableViewController.h */,
+				2C1569342099B2C5006E2140 /* PickRecipientTableViewController.m */,
 			);
 			path = QuSnap;
 			sourceTree = "<group>";
@@ -204,7 +224,11 @@
 			files = (
 				2C9F0AAC208D653300DD7F3C /* main.m in Sources */,
 				2C9F0A9E208D653300DD7F3C /* AppDelegate.m in Sources */,
+				2C8815F42097300200EFEE48 /* VerifySessionViewController.m in Sources */,
+				2C8815F72097E44400EFEE48 /* HomeTableViewController.m in Sources */,
 				2CE00BF9208EA57600EC84E1 /* SignupViewController.m in Sources */,
+				2C8815FA2097E48200EFEE48 /* NewSnapViewController.m in Sources */,
+				2C1569352099B2C5006E2140 /* PickRecipientTableViewController.m in Sources */,
 				2C9F0AB4208D659000DD7F3C /* SplashViewController.m in Sources */,
 				2C8815F120921A1500EFEE48 /* LoginViewController.m in Sources */,
 			);

@@ -21,22 +21,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 }
-/*
-- (IBAction)submitAction:(id)sender {
-    [self signinWithEmail:<#(NSString *)#> password:<#(NSString *)#>]
-}*/
 
-- (void)signinWithEmail:(NSString *)email
-               password:(NSString *)password {
-    [[FIRAuth auth] createUserWithEmail:email
-                               password:password
-                             completion:^(FIRUser *_Nullable user, NSError *_Nullable error) {
-                                 if (error != nil) {
-                                     NSLog(@"sucessful login!");
-                                 } else {
-                                     NSLog(@"error %@", error.localizedDescription);
-                                 }
-                             }];
+- (IBAction)submitAction:(id)sender {
+    [self signinWithEmail];
+}
+
+- (void)signinWithEmail {
+    [[FIRAuth auth]
+     signInWithEmail:self.emailTextField.text
+     password:self.passwordTextField.text
+     completion:^(FIRUser *_Nullable user, NSError *_Nullable error) {
+         if (error != nil) {
+             NSLog(@"sucessful login!");
+         } else {
+             NSLog(@"error %@", error.localizedDescription);
+         }
+     }];
 }
 
 @end

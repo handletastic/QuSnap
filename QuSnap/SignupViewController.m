@@ -8,6 +8,7 @@
 
 #import "SignupViewController.h"
 @import FirebaseAuth;
+@import FirebaseDatabase;
 
 @interface SignupViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
@@ -55,9 +56,7 @@
             [self invalidPasswordAlert];
         } else { //if password is valid
             //create user
-            [self signupUserWithEmail:self.emailTextField.text
-                             username:self.usernameTextField.text
-                             password:self.passwordTextField.text];
+            [self signupUserWithEmail];
         }
         
     } else { //there are empty fields
@@ -65,26 +64,32 @@
     }
 }
 
-- (void)signupUserWithEmail:(NSString *)email
-                   username:(NSString *)username
-                   password:(NSString *)password {
+- (void)signupUserWithEmail {
     //start a loading indicator
     [[FIRAuth auth]
-     createUserWithEmail:email
-     password:password
+     createUserWithEmail:self.emailTextField.text
+     password:self.passwordTextField.text
      completion:^(FIRUser *_Nullable user,
                   NSError *_Nullable error) {
-         if (error != nil) {
-             FIRUserProfileChangeRequest *changeRequest = [[FIRAuth auth].currentUser profileChangeRequest];
-             changeRequest.displayName = username;
+         if (error == nil) {
+             FIRUser *currentUser = [FIRAuth auth].currentUser;
+             FIRUserProfileChangeRequest *changeRequest = [currentUser profileChangeRequest];
+             changeRequest.displayName = self.usernameTextField.text;
              [changeRequest commitChangesWithCompletion:^(NSError *_Nullable error) {
-                 if (error) {
+                 if (error) { //an error happened
                      NSLog(@"error %@", error.localizedDescription);
                  } else {
-                     
+                     //profile update
                  }
-                 
              }];
+             //add user to a new datastore
+             FIRDatabaseReference *databaseRef = [[FIRDatabase database] reference];
+             FIRDatabaseReference *usersRef = [[databaseRef child:@"users"] child:currentUser.uid];
+             
+             NSDictionary *userInfo = @{@"uid": currentUser.uid, @"username": self.usernameTextField.text};
+             
+             [usersRef setValue:userInfo];
+             
          } else {
              //show error
          }
