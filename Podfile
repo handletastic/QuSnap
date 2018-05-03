@@ -9,5 +9,6 @@ target 'QuSnap' do
   pod 'Firebase', '~> 4.13.0'
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
+  pod 'Firebase/Database'
   
 end
