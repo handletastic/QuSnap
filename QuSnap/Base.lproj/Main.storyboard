@@ -82,10 +82,10 @@
             </objects>
             <point key="canvasLocation" x="361" y="-206"/>
         </scene>
-        <!--Sign Up View-->
+        <!--Sign Up-->
         <scene sceneID="HX2-hC-DdW">
             <objects>
-                <viewController title="Sign Up View" id="95G-Wo-nEr" customClass="SignupViewController" sceneMemberID="viewController">
+                <viewController title="Sign Up" id="95G-Wo-nEr" customClass="SignupViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bav-h4-noL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -179,10 +179,10 @@
             </objects>
             <point key="canvasLocation" x="-1498" y="33"/>
         </scene>
-        <!--Login View-->
+        <!--Login-->
         <scene sceneID="0iU-n9-4sq">
             <objects>
-                <viewController title="Login View" id="9tf-0U-SQ7" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController title="Login" id="9tf-0U-SQ7" customClass="LoginViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kTn-gr-hQz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -309,7 +309,7 @@
                             <outlet property="delegate" destination="Ap9-hS-r8t" id="1Jr-hM-d25"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="zp8-oX-9IK">
+                    <navigationItem key="navigationItem" title="Home" id="zp8-oX-9IK">
                         <barButtonItem key="rightBarButtonItem" title="New Snap" id="Vft-xo-zFA">
                             <connections>
                                 <segue destination="ZpY-82-rfv" kind="show" id="Zhg-yP-Z2H"/>
@@ -321,10 +321,10 @@
             </objects>
             <point key="canvasLocation" x="-639" y="1192"/>
         </scene>
-        <!--Pick Recipients-->
+        <!--Pick Recipients View-->
         <scene sceneID="rwh-Nf-yUb">
             <objects>
-                <tableViewController title="Pick Recipients" id="ZpY-82-rfv" customClass="PickRecipientTableViewController" sceneMemberID="viewController">
+                <tableViewController title="Pick Recipients" id="ZpY-82-rfv" userLabel="Pick Recipients View" customClass="PickRecipientTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7z0-Cn-CGH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -352,10 +352,10 @@
             </objects>
             <point key="canvasLocation" x="361" y="1191"/>
         </scene>
-        <!--New Snap View Controller-->
+        <!--New Snap-->
         <scene sceneID="EUn-jo-c28">
             <objects>
-                <viewController id="cI7-Ki-9fT" customClass="NewSnapViewController" sceneMemberID="viewController">
+                <viewController title="New Snap" id="cI7-Ki-9fT" customClass="NewSnapViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ssu-gS-w9a">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -373,13 +373,12 @@
                                     <color key="titleColor" red="0.6027872057" green="0.61624662600000002" blue="0.98548370600000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nHJ-1r-mvj">
-                                <rect key="frame" x="87" y="277" width="200" height="156"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nHJ-1r-mvj">
+                                <rect key="frame" x="87" y="276" width="200" height="156"/>
                                 <color key="backgroundColor" red="0.97636479139999999" green="0.97653168440000004" blue="0.9763541818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.6027872057" green="0.61624662600000002" blue="0.98548370600000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <rect key="contentStretch" x="0.0" y="0.050000000000000003" width="1" height="1"/>
                         <constraints>
                             <constraint firstItem="8wY-NP-VzP" firstAttribute="leading" secondItem="L1z-e0-k0l" secondAttribute="leading" constant="138" id="0f8-OT-ckG"/>

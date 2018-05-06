@@ -25,7 +25,7 @@
     [self getRecipients];
 }
 
-- (void)getRecipients { 
+- (void)getRecipients {
     FIRDatabaseReference *databaseRef = [[FIRDatabase database] reference];
     FIRDatabaseReference *usersRef = [databaseRef child:@"users"];
     
@@ -44,21 +44,21 @@
 
 #pragma mark - Table view data source
 
-- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath { //upon selecting a row
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath { //upon selecting a row
     if (self.recipientsArray == nil || self.recipientsArray.count == 0) { //check if there is an array recipient
-        return; //do nothing
+        return; //there are no recipients, hence do nothing
     }
     
     [self performSegueWithIdentifier:@"pushToSnapViewController" sender:self]; //call the seg method
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1; //because all data will look the same
+    return 1; //because the data to be displayed is all of the same type/format
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (self.recipientsArray == nil || self.recipientsArray.count == 0) { //check if there is an array recipient
-         return 1; //so we can populate with a loading
+         return 1; //this will be a loading row
     }
     return self.recipientsArray.count;
 }
