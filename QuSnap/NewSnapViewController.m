@@ -57,7 +57,9 @@
     [message setValue:self.recipientInfo[@"uid"] forKey:@"recipient"];
     [message setValue:self.messageTextField.text forKey:@"messageText"];
     
-    NSDictionary *childUpdates = @{[@"/messages/" stringByAppendingString:key]: message}; //we specify the path and value defined above
+    NSString *messagePathString = [NSString stringWithFormat:@"/messages/%@", self.recipientInfo[@"uid"]];
+    
+    NSDictionary *childUpdates = @{[messagePathString stringByAppendingString:key]: message}; //we specify the path and value defined above
     
     [databaseRef updateChildValues:childUpdates];
 }
