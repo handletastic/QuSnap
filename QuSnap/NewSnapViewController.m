@@ -57,7 +57,7 @@
     [message setValue:self.recipientInfo[@"uid"] forKey:@"recipient"];
     [message setValue:self.messageTextField.text forKey:@"messageText"];
     
-    NSString *messagePathString = [NSString stringWithFormat:@"/messages/%@", self.recipientInfo[@"uid"]];
+    NSString *messagePathString = [NSString stringWithFormat:@"/messages/%@/", self.recipientInfo[@"uid"]];
     
     NSDictionary *childUpdates = @{[messagePathString stringByAppendingString:key]: message}; //we specify the path and value defined above
     
@@ -69,7 +69,6 @@
     NSLog(@"uploadImageToFirebase"); //test console output
     
     FIRStorageReference *storageRef = [[FIRStorage storage] reference];
-    
     NSString *imagesPath = [NSString stringWithFormat:@"/images/%@", key]; //defining the storage path for img
     FIRStorageReference *imagesRef = [storageRef child:imagesPath];
     NSData *imageData = UIImageJPEGRepresentation(self.snapImageView.image, 0.5); //added compression for filesize

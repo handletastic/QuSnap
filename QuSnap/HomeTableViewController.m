@@ -7,6 +7,9 @@
 //
 
 #import "HomeTableViewController.h"
+@import Firebase;
+@import FirebaseAuth;
+@import FirebaseDatabase;
 
 @interface HomeTableViewController ()
 
@@ -17,27 +20,31 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self getMessages];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)getMessages {
+    NSString *userID = [FIRAuth auth].currentUser.uid; //grab userid
+    
+    FIRDatabaseReference *databaseRef = [[FIRDatabase database] reference];
+    FIRDatabaseQuery *messagesQuery = [[databaseRef child:@"messages"] child:userID]; //ref to get messages with uid ref
+    FIRDatabaseReference *ref = messagesQuery.ref;
+    
+    [ref observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+        NSDictionary *dict = snapshot.value;
+        NSString *key = snapshot.key;
+        
+        NSLog(@"get messages dictionary %@ key %@" , dict, key);
+    }];
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
     return 0;
 }
 
