@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NewSnapViewController : UIViewController
+@interface NewSnapViewController : UIViewController <UIImagePickerControllerDelegate>
 
 @property (strong, nonatomic) NSDictionary *recipientInfo; //setup for prepareForSegue method in the class file
 

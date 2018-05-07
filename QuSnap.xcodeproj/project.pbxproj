@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2C1569352099B2C5006E2140 /* PickRecipientTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1569342099B2C5006E2140 /* PickRecipientTableViewController.m */; };
+		2C5B7903209E8FBA002E66FD /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5B7902209E8FB9002E66FD /* MobileCoreServices.framework */; };
 		2C8815F120921A1500EFEE48 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8815F020921A1500EFEE48 /* LoginViewController.m */; };
 		2C8815F42097300200EFEE48 /* VerifySessionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8815F32097300200EFEE48 /* VerifySessionViewController.m */; };
 		2C8815F72097E44400EFEE48 /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8815F62097E44400EFEE48 /* HomeTableViewController.m */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		2C1569332099B2C5006E2140 /* PickRecipientTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PickRecipientTableViewController.h; sourceTree = "<group>"; };
 		2C1569342099B2C5006E2140 /* PickRecipientTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PickRecipientTableViewController.m; sourceTree = "<group>"; };
+		2C5B7902209E8FB9002E66FD /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		2C8815EF20921A1500EFEE48 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		2C8815F020921A1500EFEE48 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		2C8815F22097300200EFEE48 /* VerifySessionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VerifySessionViewController.h; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C5B7903209E8FBA002E66FD /* MobileCoreServices.framework in Frameworks */,
 				C9077E768FF4A8D6E31DDA3B /* libPods-QuSnap.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -67,6 +70,7 @@
 		07BA8CD83FA11DC02EE47335 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2C5B7902209E8FB9002E66FD /* MobileCoreServices.framework */,
 				8C4EFAA84163603FA9177B2C /* libPods-QuSnap.a */,
 			);
 			name = Frameworks;
