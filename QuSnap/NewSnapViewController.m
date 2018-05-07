@@ -10,13 +10,13 @@
 #import <MobileCoreServices/MobileCoreServices.h>
 @import Firebase;
 @import FirebaseCore;
+@import FirebaseStorage;
 
 @interface NewSnapViewController ()
 
 @property (strong, nonatomic) IBOutlet UIImageView *snapImageView;
 @property (strong, nonatomic) IBOutlet UITextField *messageTextField;
 @property (strong, nonatomic) IBOutlet UIButton *sendButton;
-
 
 @end
 
@@ -25,6 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //create a tap gesture for when the user wants to add a photo to his snap
     UITapGestureRecognizer *tapPicture = [[UITapGestureRecognizer alloc]
                                           initWithTarget:self
                                           action:@selector(choosePicture)];
@@ -36,6 +37,56 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
+
+- (IBAction)sendAction:(id)sender {
+    NSLog(@"sendAction");
+    [self saveMessageToFirebase];
+}
+
+- (void)saveMessageToFirebase {
+    NSLog(@"saveMessageToDatabase");
+    FIRUser *currentUser = [FIRAuth auth].currentUser;
+    FIRDatabaseReference *databaseRef = [[FIRDatabase database] reference];
+    
+    NSString *key = [[databaseRef child: @"messages"] childByAutoId].key; //creating a path to save to
+    
+    [self uploadImageToFirebase:key];
+    
+    NSMutableDictionary *message = [[NSMutableDictionary alloc] init];
+    [message setValue:currentUser.uid forKey:@"sender"];
+    [message setValue:self.recipientInfo[@"uid"] forKey:@"recipient"];
+    [message setValue:self.messageTextField.text forKey:@"messageText"];
+    
+    NSDictionary *childUpdates = @{[@"/messages/" stringByAppendingString:key]: message}; //we specify the path and value defined above
+    
+    [databaseRef updateChildValues:childUpdates];
+}
+
+- (void)uploadImageToFirebase:(NSString *)key { //we pass the key of the message as an arg to be able to crossinfo
+    //create a root reference
+    NSLog(@"uploadImageToFirebase"); //test console output
+    
+    FIRStorageReference *storageRef = [[FIRStorage storage] reference];
+    
+    NSString *imagesPath = [NSString stringWithFormat:@"/images/%@", key]; //defining the storage path for img
+    FIRStorageReference *imagesRef = [storageRef child:imagesPath];
+    NSData *imageData = UIImageJPEGRepresentation(self.snapImageView.image, 0.5); //added compression for filesize
+    
+    FIRStorageMetadata *metadata = [FIRStorageMetadata new];
+    metadata.contentType = @"image/jpeg"; //setting the data format for servers to know how to handle
+    
+    [imagesRef putData:imageData metadata:metadata
+            completion:^(FIRStorageMetadata * _Nullable metadata, NSError * _Nullable error) {
+        if (error != nil) {
+            NSLog(@"error %@", error);
+            //TODO:show error message and let them retry
+            return;
+        }
+        
+        NSLog(@"success! uploaded metadata %@", metadata); //test console output
+    }];
+}
+
 - (void)choosePicture {
     NSLog(@"choosePicture"); //test console output
     [self chooseSnapPictureForImageView:self.snapImageView];

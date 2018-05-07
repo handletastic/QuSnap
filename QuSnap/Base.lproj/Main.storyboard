@@ -375,6 +375,9 @@
                                 <state key="normal" title="Send snap">
                                     <color key="titleColor" red="0.6027872057" green="0.61624662600000002" blue="0.98548370600000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="sendAction:" destination="cI7-Ki-9fT" eventType="touchUpInside" id="wxF-2V-icI"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nHJ-1r-mvj">
                                 <rect key="frame" x="87" y="277" width="200" height="156"/>
