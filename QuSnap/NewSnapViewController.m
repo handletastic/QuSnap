@@ -54,7 +54,9 @@
     
     NSMutableDictionary *message = [[NSMutableDictionary alloc] init];
     [message setValue:currentUser.uid forKey:@"sender"];
+    [message setValue:currentUser.displayName forKey:@"senderUsername"]; //what we should display on message cell
     [message setValue:self.recipientInfo[@"uid"] forKey:@"recipient"];
+    [message setValue:self.recipientInfo[@"username"] forKey:@"recipientUsername"];
     [message setValue:self.messageTextField.text forKey:@"messageText"];
     
     NSString *messagePathString = [NSString stringWithFormat:@"/messages/%@/", self.recipientInfo[@"uid"]];
