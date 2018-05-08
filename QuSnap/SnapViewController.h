@@ -11,5 +11,6 @@
 @interface SnapViewController : UIViewController
 
 @property (strong, nonatomic) NSDictionary *messageInfo;
+@property (strong, nonatomic) NSString *messageKey; //setup to pass the messageKey to fetch the actual message details and image storage
 
 @end

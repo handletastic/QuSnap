@@ -15,6 +15,7 @@
 @interface HomeTableViewController ()
 
 @property (strong, nonatomic) NSMutableArray *messagesArray;
+@property (strong, nonatomic) NSMutableArray *keysArray;
 
 @end
 
@@ -39,6 +40,8 @@
         self.messagesArray = [[NSMutableArray alloc] init];
         self.messagesArray = [[queryResult allValues] mutableCopy];
         
+        self.keysArray =[[queryResult allKeys] mutableCopy];
+        
         [self.tableView reloadData]; //reload the data on the table view after fetching the messages array of the user
         
         //debug for messages for the currently logged user
@@ -62,6 +65,13 @@
     return self.messagesArray.count; //return the number of messages on the array to create the right number of cell rows
 }
 
+ - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+     if (self.messagesArray == nil || self.messagesArray.count == 0) { //check if there is an array recipient
+     return; //there are no recipients, hence do nothing
+ }
+ 
+     [self performSegueWithIdentifier:@"pushToViewMessage" sender:self]; //call the seg method
+ }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"messageCell"]; //subtitle cell style allows to display the senderUsername on the message cell
@@ -93,14 +103,6 @@
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (self.messagesArray == nil || self.messagesArray.count == 0) { //check if there is an array recipient
-        return; //there are no recipients, hence do nothing
-    }
-    
-    [self performSegueWithIdentifier:@"pushToViewMessage" sender:self]; //call the seg method
-}
-
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -110,6 +112,5 @@
         viewSnapController.messageInfo = [self.messagesArray objectAtIndex:self.tableView.indexPathForSelectedRow.row];
     }
 }
-
 
 @end
