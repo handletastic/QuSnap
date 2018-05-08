@@ -7,6 +7,7 @@
 //
 
 #import "NewSnapViewController.h"
+#import "HomeTableViewController.h"
 #import <MobileCoreServices/MobileCoreServices.h>
 @import Firebase;
 @import FirebaseCore;
@@ -86,6 +87,8 @@
             return;
         }
         
+        [self popToHomeViewController];
+        
         NSLog(@"success! uploaded metadata %@", metadata); //test console output
     }];
 }
@@ -93,6 +96,16 @@
 - (void)choosePicture {
     NSLog(@"choosePicture"); //test console output
     [self chooseSnapPictureForImageView:self.snapImageView];
+}
+
+- (void)popToHomeViewController {
+    NSMutableArray *allViewController = [NSMutableArray arrayWithArray:self.navigationController.viewControllers];
+    
+    for (UIViewController *aViewController in allViewController) {
+        if ([aViewController isKindOfClass:[HomeTableViewController class]]) {
+            [self.navigationController popToViewController:aViewController animated:YES];
+        }
+    }
 }
 
 

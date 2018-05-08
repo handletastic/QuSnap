@@ -8,6 +8,7 @@
 
 #import "SnapViewController.h"
 @import Firebase;
+@import FirebaseStorage;
 
 @interface SnapViewController ()
 @property (strong, nonatomic) IBOutlet UIImageView *messageImageView;
@@ -42,7 +43,6 @@
         if (error != nil) {
             NSLog(@"error downloading image %@", error.localizedDescription);
         } else {
-            // Data for "images/island.jpg" is returned
             self.messageImageView.image = [UIImage imageWithData:data];
         }
     }];

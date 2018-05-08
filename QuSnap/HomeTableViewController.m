@@ -40,7 +40,7 @@
         self.messagesArray = [[NSMutableArray alloc] init];
         self.messagesArray = [[queryResult allValues] mutableCopy];
         
-        self.keysArray =[[queryResult allKeys] mutableCopy];
+        self.keysArray =[[queryResult allKeys] mutableCopy]; //get all the keys of the messages of the array
         
         [self.tableView reloadData]; //reload the data on the table view after fetching the messages array of the user
         
@@ -110,6 +110,7 @@
         SnapViewController *viewSnapController = (SnapViewController *)segue.destinationViewController;
         
         viewSnapController.messageInfo = [self.messagesArray objectAtIndex:self.tableView.indexPathForSelectedRow.row];
+        viewSnapController.messageKey = [self.keysArray objectAtIndex:self.tableView.indexPathForSelectedRow.row];
     }
 }
 
