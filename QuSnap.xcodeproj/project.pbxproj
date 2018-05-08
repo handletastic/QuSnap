@@ -19,6 +19,7 @@
 		2C9F0AA9208D653300DD7F3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C9F0AA7208D653300DD7F3C /* LaunchScreen.storyboard */; };
 		2C9F0AAC208D653300DD7F3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9F0AAB208D653300DD7F3C /* main.m */; };
 		2C9F0AB4208D659000DD7F3C /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9F0AB3208D659000DD7F3C /* SplashViewController.m */; };
+		2CA6DB0A20A1DFC100B26E40 /* SnapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA6DB0920A1DFC100B26E40 /* SnapViewController.m */; };
 		2CB091B22091C09700E2CFE6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CB091B12091C09700E2CFE6 /* GoogleService-Info.plist */; };
 		2CE00BF9208EA57600EC84E1 /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE00BF8208EA57600EC84E1 /* SignupViewController.m */; };
 		C9077E768FF4A8D6E31DDA3B /* libPods-QuSnap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C4EFAA84163603FA9177B2C /* libPods-QuSnap.a */; };
@@ -46,6 +47,8 @@
 		2C9F0AAB208D653300DD7F3C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2C9F0AB2208D659000DD7F3C /* SplashViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
 		2C9F0AB3208D659000DD7F3C /* SplashViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
+		2CA6DB0820A1DFC100B26E40 /* SnapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SnapViewController.h; sourceTree = "<group>"; };
+		2CA6DB0920A1DFC100B26E40 /* SnapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SnapViewController.m; sourceTree = "<group>"; };
 		2CB091B12091C09700E2CFE6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2CE00BF7208EA57600EC84E1 /* SignupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignupViewController.h; sourceTree = "<group>"; };
 		2CE00BF8208EA57600EC84E1 /* SignupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignupViewController.m; sourceTree = "<group>"; };
@@ -119,6 +122,8 @@
 				2C8815F92097E48200EFEE48 /* NewSnapViewController.m */,
 				2C1569332099B2C5006E2140 /* PickRecipientTableViewController.h */,
 				2C1569342099B2C5006E2140 /* PickRecipientTableViewController.m */,
+				2CA6DB0820A1DFC100B26E40 /* SnapViewController.h */,
+				2CA6DB0920A1DFC100B26E40 /* SnapViewController.m */,
 			);
 			path = QuSnap;
 			sourceTree = "<group>";
@@ -230,6 +235,7 @@
 				2C9F0A9E208D653300DD7F3C /* AppDelegate.m in Sources */,
 				2C8815F42097300200EFEE48 /* VerifySessionViewController.m in Sources */,
 				2C8815F72097E44400EFEE48 /* HomeTableViewController.m in Sources */,
+				2CA6DB0A20A1DFC100B26E40 /* SnapViewController.m in Sources */,
 				2CE00BF9208EA57600EC84E1 /* SignupViewController.m in Sources */,
 				2C8815FA2097E48200EFEE48 /* NewSnapViewController.m in Sources */,
 				2C1569352099B2C5006E2140 /* PickRecipientTableViewController.m in Sources */,
